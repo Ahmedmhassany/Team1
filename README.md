@@ -7,19 +7,15 @@ This project contains a premium web gallery and a high-fidelity poster for showc
 - `style.css`: Modern styling for the gallery with glassmorphism and animations.
 - `poster.html`: A professional poster design featuring a QR code.
 - `poster_bg.png`: A high-resolution abstract background for the poster.
+- `qrcode.png`: The high-resolution QR code image for your live gallery.
 - `Images`: The original image files are used directly in the gallery.
 
+## Live Gallery
+The gallery is now live at: [https://team1-zeta.vercel.app/](https://team1-zeta.vercel.app/)
+
 ## How to use
-1. **Gallery**: Open `index.html` in any browser to view the team gallery.
-2. **Poster**: Open `poster.html` to view the poster. It is designed at an A4 aspect ratio.
-3. **Updating the Link**:
-   - Once you host the gallery (e.g., on GitHub Pages or Netlify), you will get a public URL.
-   - Open `poster.html` in a text editor.
-   - Find the `<img>` tag for the QR code:
-     ```html
-     <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://team-images-gallery.vercel.app" alt="QR Code">
-     ```
-   - Replace `https://team-images-gallery.vercel.app` with your actual public URL. The QR code will update automatically.
+1. **Gallery**: View the live gallery at the link above.
+2. **Poster**: Open `poster.html` to view and print your poster. The QR code is already configured to point to your live gallery.
 
 ## Team Members Extracted
 The following members were extracted from your image filenames:
