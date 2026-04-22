@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #00d4ff;
+            --text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text);
+        }
+
+        .poster {
+            position: relative;
+            width: 800px;
+            height: 1131px; /* A4 Ratio approx */
+            background: url('poster_bg.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .poster::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .qr-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            transform: scale(1.1);
+        }
+
+        .qr-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .qr-container img {
+            width: 250px;
+            height: 250px;
+            display: block;
+        }
+
+        .qr-section span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer {
+            font-size: 1rem;
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+
+        .decoration {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            opacity: 0.3;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="content">
+            <div class="decoration">2026 / VOL. 1</div>
+            
+            <div class="header">
+                <h1>The Team</h1>
+                <p>INNOVATION & COLLABORATION</p>
+            </div>
+
+            <div class="qr-section">
+                <div class="qr-container">
+                    <!-- QR Code API: Using a placeholder URL -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://team-images-gallery.vercel.app" alt="QR Code">
+                </div>
+                <span>Scan to Explore Gallery</span>
+            </div>
+
+            <div class="footer">
+                <p>DESIGNED BY ANTIGRAVITY &bull; BUILT FOR EXCELLENCE</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
